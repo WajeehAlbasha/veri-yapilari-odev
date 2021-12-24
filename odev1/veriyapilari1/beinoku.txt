@@ -1,0 +1,10 @@
+derlecalistir:program calistir
+
+program:test.o main.o
+	g++ ./lib/test.o ./lib/main.o -o ./bin/program
+test.o:
+	g++ -I "./include" -c ./src/test.cpp -o ./lib/test.o 
+main.o:
+	g++ -I "./include" -c ./src/main.cpp -o ./lib/ main.o 
+calistir:
+	./bin/program.exe
